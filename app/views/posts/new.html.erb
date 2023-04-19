@@ -1,0 +1,7 @@
+<%= form_with model: @post do |form| %>
+  <%= form.label(:title, 'Title:') %>
+  <%= form.text_field(:title, :placeholder => 'Title goes here') %>
+  <%= form.label(:body, 'Body:') %>
+  <%= form.text_area(:body, cols: 20, rows: 20) %>
+  <%= form.submit %>
+<% end %>
