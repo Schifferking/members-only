@@ -1,24 +1,4 @@
-# README
+# Members-only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is part of The Odin's Project Ruby on Rails course.<br>
+It uses concepts learned from previous lessons (e.g. authentication and authorization) to make a page where users can log in, create posts and log out. Also it hides the author's name of all the posts to users who haven't logged. The posts remain visible to everyone.
