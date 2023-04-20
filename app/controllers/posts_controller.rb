@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to action: 'index'
     else
+      flash.now[:alert] = 'Something went wrong when creating the post.'
       render :new, status: :unprocessable_entity
     end
   end
