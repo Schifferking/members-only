@@ -1,0 +1,13 @@
+<h1>Posts</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+  <li>
+    <%= link_to post.title, post %>
+    <% if current_user %>
+      <% @user_post = User.find(post.user_id).name %>
+      <%= " by #{@user_post}" %>
+    <% end %>
+  </li>
+  <% end %>
+</ul>

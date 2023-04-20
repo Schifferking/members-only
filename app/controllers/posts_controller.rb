@@ -6,13 +6,22 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params, user_id: current_user.id)
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     if @post.save
-      redirect_to posts
+      redirect_to action: 'index'
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def index
+    @posts = Post.all
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private
